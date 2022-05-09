@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ArtCard from '../../components/Art/Card';
+import styles from '../../App.css';
 
 export default function ArtList() {
   const [artWorks, setArtWorks] = useState([]);
@@ -8,7 +9,7 @@ export default function ArtList() {
   useEffect(() => {
     async function fetchArt() {
       const res = await fetch(
-        'https://api.artic.edu/api/v1/artworks/search?fields=id,title,image_id,artist_title,&limit=12&page=1&q=poppy'
+        'https://api.artic.edu/api/v1/artworks/search?fields=id,title,image_id,artist_title,artwork_type_title&limit=12&page=1&q=food'
       );
 
       const results = await res.json();
@@ -20,11 +21,11 @@ export default function ArtList() {
 
   return (
     <>
-      <h3>Poppy Art</h3>
+      <h3>Food Art</h3>
       {loading ? (
         <p>loading...</p>
       ) : (
-        <div>
+        <div className={styles.list}>
           {artWorks.map((art) => {
             return <ArtCard key={art.id} art={art} />;
           })}

@@ -1,0 +1,14 @@
+.img {
+    width: 20rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 1rem;
+}

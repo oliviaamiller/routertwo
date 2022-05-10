@@ -4,10 +4,10 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 render(
-  <React.StrictMode>
-    <Router>
+  <Router>
+    <React.StrictMode>
       <App />
-    </Router>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );

@@ -9,7 +9,7 @@ export default function App() {
         <Route exact path="/">
           <Redirect to="/art" />
         </Route>
-        <Route path="/art">
+        <Route exact path="/art">
           <ArtList />
         </Route>
         <Route path="/art/:id">

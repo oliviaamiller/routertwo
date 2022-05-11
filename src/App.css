@@ -1,0 +1,68 @@
+.img {
+  width: 20rem;
+  padding-bottom: 6rem;
+}
+
+.imgBig {
+    width: 50rem;
+}
+
+h3 {
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: palevioletred;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  border: 1px solid rgb(56, 55, 60);
+  padding: 1rem;
+  box-shadow: 4px 4px;
+  height: 35rem;
+  position: relative;
+}
+
+.cardData {
+    position: absolute;
+    bottom: 0;
+}
+
+.detail {
+    display: grid;
+    grid: 1fr / 1fr .75fr;
+}
+
+.title {
+  font-weight: 600;
+  width: 16rem;
+}
+
+.artist {
+  font-style: italic;
+}
+
+a:link {
+  color: rgb(56, 55, 60);
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(56, 55, 60);
+  text-decoration: none;
+}
+
+a:hover {
+  color: hotpink;
+  border: 1px solid hotpink;
+}

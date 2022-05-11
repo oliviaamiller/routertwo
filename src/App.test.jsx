@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
 describe('Art Router tests', () => {
-  it('is testing navigation from list to detail page with MemoryRouter', async () => {
+  it('should navigate from list to detail page', async () => {
     render(
       <MemoryRouter>
         <App />
@@ -22,5 +22,22 @@ describe('Art Router tests', () => {
 
     expect(materials).toBeInTheDocument();
   });
-});
 
+  it('should render a specific detail page given a url with an id', async () => {
+    render(
+      <MemoryRouter
+        initialEntries={['/', '/art', '/art/61608']}
+        initialIndex={2}
+      >
+        <App />
+      </MemoryRouter>
+    );
+
+    const title = await screen.findByText('Sunset');
+
+    const date = await screen.findByText('1930, Germany');
+
+    expect(title).toBeInTheDocument();
+    expect(date).toBeInTheDocument();
+  });
+});

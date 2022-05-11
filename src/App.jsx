@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect, Link } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import ArtList from './views/Art/List';
 import ArtDetails from './views/Art/Details';
 
@@ -13,7 +13,6 @@ export default function App() {
           <ArtList />
         </Route>
         <Route path="/art/:id">
-          <Link to="/">{'Back to All Art'}</Link>
           <ArtDetails />
         </Route>
       </Switch>

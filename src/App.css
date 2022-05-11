@@ -3,6 +3,17 @@
   padding-bottom: 6rem;
 }
 
+.imgBig {
+    width: 50rem;
+}
+
+h3 {
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: palevioletred;
+}
+
 .list {
   display: flex;
   flex-direction: row;
@@ -25,6 +36,11 @@
 .cardData {
     position: absolute;
     bottom: 0;
+}
+
+.detail {
+    display: grid;
+    grid: 1fr / 1fr .75fr;
 }
 
 .title {

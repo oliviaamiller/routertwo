@@ -11,6 +11,8 @@ describe('Art Router tests', () => {
       </MemoryRouter>
     );
 
+    await screen.getByText(/loading.../i);
+
     // find an artwork in the list by it's alt text
     const link = await screen.findByAltText('Painting of eyes by Paul Klee');
 

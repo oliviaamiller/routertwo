@@ -32,7 +32,10 @@ export default function ArtDetails() {
           <p className={styles.title}>{art.title}</p>
           <p className={styles.artist}>{art.artist_title}</p>
           <p>{art.date_display}, {art.place_of_origin}</p>
-          <p>{`${art.artwork_type_title}, ${art.classification_title}`}</p>
+          {art.artwork_type_title.toUpperCase() === art.classification_title.toUpperCase() ?
+          <p>{art.artwork_type_title}</p>
+          : <p>{`${art.artwork_type_title}, ${art.classification_title}`}</p>
+            }
         </div>
       )}
     </>
